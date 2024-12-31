@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+	/* How to book taxi steps */
+	.how-to-book-taxi-steps {
+		@apply pl-[26px] ml-3 border-l border-black;
+	}
+	.how-to-book-taxi-steps .step {
+		@apply pl-3 relative mb-8 last:mb-0;
+	}
+	.how-to-book-taxi-steps .step::before {
+		@apply content-[''] absolute w-[26px] aspect-square rounded-full border-[8px] border-black bg-white left-[-39px];
+	}
+
+	.how-to-book-taxi-steps .step .title {
+		@apply font-semibold text-2xl mb-4;
+	}
+	.how-to-book-taxi-steps .step .subtitle {
+		@apply font-semibold mb-3;
+	}
+	/* Experience Fastest Ways */
+
+	.experience-fastest-ways {
+		@apply ml-[26px] border-l border-black;
+	}
+	.experience-fastest-ways .step {
+		@apply pl-12 relative mb-8 last:mb-0 z-10;
+	}
+	.experience-fastest-ways .step .icon {
+		@apply absolute -top-5 left-0 -translate-x-1/2 z-10;
+	}
+	.experience-fastest-ways .step .subtitle {
+		@apply font-semibold mb-3;
+	}
+	.font--italic {
+		font-style: italic;
+	}
+	/* How it Works */
+
+	.how-it-works {
+		@apply pl-[26px] ml-3 border-l border-black;
+	}
+	.how-it-works .step {
+		@apply pl-3 relative mb-8 last:mb-0;
+	}
+	.how-it-works .step::before {
+		@apply content-[''] absolute w-[20px] aspect-square bg-black left-[-36px] top-1;
+	}
+
+	.how-it-works .step .title {
+		@apply font-semibold text-lg mb-4;
+	}
+	.how-it-works .step .subtitle {
+		@apply font-semibold mb-3;
+	}
+	/* Btn */
+	.btn-black {
+		@apply bg-black text-white text-xl h-[51px] px-7 rounded-full;
+	}
+	.timeline-wrap {
+		@apply flex justify-evenly text-[15px] font-semibold text-[#0009FF];
+	}
+	.timeline-wrap .item {
+		@apply relative flex flex-col-reverse items-center empty:invisible  gap-4;
+	}
+	.timeline-wrap.style-2 .item {
+		@apply flex-col;
+	}
+	.timeline-wrap .item::before {
+		@apply content-[""] w-4 h-4 bg-black rounded-full;
+	}
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+	@apply !bg-transparent;
+}
